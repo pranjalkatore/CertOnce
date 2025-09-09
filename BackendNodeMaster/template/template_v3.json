@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://w3id.org/blockcerts/v3",    
+    {
+      "certificatepng": {"@id": "cred:issuer", "@type": "@id"},     
+      "competencyname": {"@id": "cred:issuer", "@type": "@id"},
+      "templateid": {"@id": "cred:issuer", "@type": "@id"},
+      "version": {"@id": "cred:issuer", "@type": "@id"}
+    }
+  ],
+  "id": "https://test.certonce.com/verifier/certonce/11/7a5696b9-2251-40a4-a4ea-109e4af9c1b8",
+  "type": [
+    "VerifiableCredential",
+    "BlockcertsCredential"
+  ],
+  "issuer": "https://test.certonce.com/blockchain/11/issuer.json",
+  "issuanceDate": "2022-08-18T14:04:24Z",
+  "credentialSubject": {
+    "name": "Meenoy Seesongkham",
+    "email": "julien.fraichot@hyland.com",
+    "publicKey":"ecdsa-koblitz-pubkey:xcdfsfsdfssssss"
+  },
+  "display": {
+    "contentMediaType": "text/html",
+    "content": "<div style=\"background-color:transparent;padding:6px;display:inline-flex;align-items:center;flex-direction:column\">Hello world</div>"
+  },
+  "certificatepng":"https://test.certonce.com/certificatepng/11/7a5696b9-2251-40a4-a4ea-109e4af9c1b8.png",  
+  "competencyname":"Test programme",
+  "templateid":"template200e",
+  "version":"v3"
+}
