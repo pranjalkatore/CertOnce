@@ -1,3 +1,4 @@
+require("dotenv").config(); 
 var myip="https://www.certonce.com";
 var wwwdir="/var/www/html";
 const { Poppler } = require("node-poppler");
@@ -19,7 +20,7 @@ const { createCanvas, loadImage, Canvas, Image } = require("canvas");
 var verifier_url_direct=myip+subwwwurl+"/verify/";
 var wwwdir="/var/www/html";
 var subwwwurl="";
-const config = require('./config');
+
 
 function convert_titlecase(sentence){
     let regex = /(^|\b(?!(and?|in?|at?|the|for|to|but|by|is)\b))\w+/g;
@@ -4593,11 +4594,11 @@ module.exports = {
             var api_base_url = "https://iilm.my.salesforce.com";
             var oauth_base_url = "https://login.salesforce.com";
             var oauth_account = {
-            'username': config.SALESFORCE_USER,
-            'password': config.SALESFORCE_PASSWORD,
+            'username': process.env.SALESFORCE_USER,
+            'password': process.env.SALESFORCE_PASSWORD,
             'grant_type': 'password',
-            'client_id': config.SALESFORCE_CLIENT_ID,
-            'client_secret': config.SALESFORCE_CLIENT_SECRET
+            'client_id': process.env.SALESFORCE_CLIENT_ID,
+            'client_secret': process.env.SALESFORCE_CLIENT_SECRET
             };
 
             var oauth_login_url = `${oauth_base_url}/services/oauth2/token`;     
